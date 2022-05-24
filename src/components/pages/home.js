@@ -8,7 +8,7 @@ import membership from "../img/membership.png";
 import Banner from "../Banner";
 import {useState, useEffect} from "react";
 
-
+// testing
 function Home() {
   const [items, setItems] = useState([])
   useEffect(
