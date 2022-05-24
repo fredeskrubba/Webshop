@@ -1,0 +1,65 @@
+@import "variables";
+.item-slider{
+    padding: 1vw;
+    h2{
+        font-size: 4rem;
+        font-family: $header-font;
+        padding: 0;
+        margin: 1rem 4rem;
+        color: $main-color-1;
+        border-bottom: 5px solid $main-color-1;
+        width: 30%;
+       
+    }
+    .news-cards{
+        margin: 0 4vw;
+        overflow: auto;
+        white-space: nowrap;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .card{
+            display: inline-block;
+            margin: 0 2vw;
+            width: 30vw;
+            img{
+                height: 25vh;
+                width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .text-box{
+                background-color: $secondary-color;
+                padding: 1vw;
+                color: $main-color-2;
+                .text-box-content{
+                    background-color: $background-color;
+                    margin: 1vw;
+                    border-radius: 15px;
+                    padding: 2vw;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar { 
+                        width: 0; 
+                    }
+                    max-height: 18vh;
+                    .flex-container{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 2vh;
+                        h3{
+                            margin-right: auto;
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                        }
+                        p{
+                            font-size: 1.3rem;
+                        }
+                    }
+                    .description{
+                        white-space: normal;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+nav{
+    background-color: $main-color-1;
+    display: flex;
+    align-items: center;
+    padding: 3.6vw 5vw;
+    font-weight: 900;
+    .logo{
+        margin-right: auto;
+        font-size: 3rem;
+        color: $background-color;
+        text-decoration: none;
+    }
+    .icons{
+        display: flex;
+        gap: 4vw;
+        a{
+            display: flex;
+            align-items: center;
+            color: $background-color;
+            font-size: 1.5rem;
+            font-weight: 200;
+            text-decoration: none;
+            &:hover{
+                color: $secondary-color;
+                div{
+                    svg{
+                        path{
+                            fill: $secondary-color
+                        };
+                    }
+                }
+            }
+            div{
+                display: flex;
+                gap: 1vw;
+                align-items: center;
+            }
+        }
+    }
+}

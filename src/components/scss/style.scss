@@ -1,0 +1,19 @@
+@import "partials/item-slider";
+@import "partials/navbar";
+@import "partials/header";
+@import "partials/banner";
+@import "partials/form-section";
+@import "partials/footer";
+@import "partials/maps";
+
+
+
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+    font-family: $main-font;
+    background-color: $background-color;
+    margin: 0;
+}
