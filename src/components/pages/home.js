@@ -8,7 +8,7 @@ import membership from "../img/membership.png";
 import Banner from "../Banner";
 import {useState, useEffect} from "react";
 
-// testing
+
 function Home() {
   const [items, setItems] = useState([])
   useEffect(
@@ -19,7 +19,7 @@ function Home() {
       })
       .then(data =>{
         console.log(data)
-        setItems(data.news)
+        setItems(data)
       })
     }
   ,[])
@@ -32,13 +32,12 @@ function Home() {
           />
           <ItemSlider 
             headline="Nyheder"
-            items={items}
+            // Check if the news array is in the data, and render it if true
+            items={items["news"] ? items.news : []}
           />
           <ItemSlider 
             headline="Populære"
-
-
-            items={[]}
+            items={items["populare"] ? items.populare : []}
           />
           <Banner 
             headline="VI GÅR OP I VORES KUNDER"
