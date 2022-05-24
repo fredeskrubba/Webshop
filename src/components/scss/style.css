@@ -97,13 +97,18 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3.6vw 5vw;
+  padding: 2vw 5vw;
   font-weight: 900;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 nav .logo {
   margin-right: auto;
-  font-size: 3rem;
+  width: 10vw;
   color: #f8f5f2;
   text-decoration: none;
 }
@@ -150,18 +155,20 @@ header {
   height: 70vh;
   background-size: cover;
   padding: 3vw;
+  margin-top: 15vh;
 }
 
 header h1 {
   font-family: "Bebas Neue", cursive;
-  font-size: 10rem;
+  font-size: 8rem;
   color: #f8f5f2;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #a8571d;
   border-bottom: 5px solid #a8571d;
   max-width: 55%;
   padding-bottom: 4vh;
   line-height: 14vh;
+  font-weight: 500;
 }
 
 header button {
@@ -179,6 +186,7 @@ header button {
   left: 66vw;
   height: 20vh;
   border: none;
+  z-index: 0;
 }
 
 header button:hover {
@@ -435,6 +443,7 @@ footer .upper-footer .footer-nav .links div a svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 2;
 }
 
 .modal svg {

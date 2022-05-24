@@ -2,11 +2,16 @@ nav{
     background-color: $main-color-1;
     display: flex;
     align-items: center;
-    padding: 3.6vw 5vw;
+    padding: 2vw 5vw;
     font-weight: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
     .logo{
         margin-right: auto;
-        font-size: 3rem;
+        width: 10vw;
         color: $background-color;
         text-decoration: none;
     }

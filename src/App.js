@@ -1,18 +1,19 @@
-import Navbar from "./components/Navbar";
+import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import {ReactComponent as maps} from "./components/img/maps.svg";
 import {ReactComponent as account} from "./components/img/account.svg";
 import {ReactComponent as heart} from "./components/img/heart.svg";
 import {ReactComponent as facebook} from "./components/img/facebook.svg";
 import {ReactComponent as youtube} from "./components/img/youtube.svg";
 import {ReactComponent as insta} from "./components/img/insta.svg";
+import {ReactComponent as Logo} from "./components/img/logo.svg";
+import "./components/scss/style.css";
+import Navbar from "./components/Navbar";
 import FormSection from "./components/FormSection";
 import Footer from "./components/footer/Footer";
 import payments from "./components/img/payments.png";
 import Home from "./components/pages/home";
 import Account from "./components/pages/account";
-import Maps from "./components/pages/maps";
-import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
-import "./components/scss/style.css";
+import Maps from "./components/Maps";
 
 function App() {
   const socials = [
@@ -67,16 +68,13 @@ function App() {
     <Router>
       <div className="App">
         <Navbar
-          logo="Fredes Webshop"
+          logo={<Logo/>}
           icons={navButtons}
         />
         <Routes>
           <Route path="/" element={<Home/>}>
           </Route>
           <Route path="/account" element={<Account/>}>
-
-          </Route>
-          <Route path="/maps" element={<Maps/>}>
 
           </Route>
         </Routes>
@@ -86,6 +84,7 @@ function App() {
           inputs={inputs}
           buttonText="Tilmeld"
         />
+        <Maps/>
         <Footer 
           weekdays="9:30-16:00"
           saturdays="10:00-15:00"
