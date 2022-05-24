@@ -12,11 +12,8 @@ header{
         -webkit-text-stroke-color: $main-color-1;
         border-bottom: 5px solid $main-color-1;
         max-width: 55%;
-<<<<<<< HEAD
-        padding: 0;
-=======
+
         padding-bottom: 4vh;
->>>>>>> f45fc798228358975299e4103e486ac8f98ecd08
         line-height: 14vh;
     }
     button{
@@ -27,11 +24,7 @@ header{
         align-items: center;
         border-radius: 100px;
         position: relative;
-        left: 66vw;
-<<<<<<< HEAD
-        top: 12vh;
-=======
->>>>>>> f45fc798228358975299e4103e486ac8f98ecd08
+        left: 66vw; 
         height: 20vh;
         border: none;
         &:hover{
