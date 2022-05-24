@@ -9,9 +9,21 @@ import Banner from "../Banner";
 import {useState, useEffect} from "react";
 
 
-
 function Home() {
   const [items, setItems] = useState([])
+  useEffect(
+    ()=>{
+      fetch("https://my-webshop-api.herokuapp.com/items")
+      .then(response => {
+        return response.json()
+      })
+      .then(data =>{
+        console.log(data)
+        setItems(data.news)
+      })
+    }
+  ,[])
+
   return ( 
       <div>
           <Header
@@ -24,7 +36,9 @@ function Home() {
           />
           <ItemSlider 
             headline="Populære"
-            items={items}
+
+
+            items={[]}
           />
           <Banner 
             headline="VI GÅR OP I VORES KUNDER"
@@ -44,5 +58,4 @@ function Home() {
       </div>
     )
   }
-
 export default Home;

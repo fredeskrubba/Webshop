@@ -160,7 +160,11 @@ header h1 {
   -webkit-text-stroke-color: #a8571d;
   border-bottom: 5px solid #a8571d;
   max-width: 55%;
+<<<<<<< HEAD
   padding: 0;
+=======
+  padding-bottom: 4vh;
+>>>>>>> f45fc798228358975299e4103e486ac8f98ecd08
   line-height: 14vh;
 }
 
@@ -177,7 +181,10 @@ header button {
   border-radius: 100px;
   position: relative;
   left: 66vw;
+<<<<<<< HEAD
   top: 12vh;
+=======
+>>>>>>> f45fc798228358975299e4103e486ac8f98ecd08
   height: 20vh;
   border: none;
 }
