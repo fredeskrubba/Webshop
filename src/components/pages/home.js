@@ -18,7 +18,6 @@ function Home() {
         return response.json()
       })
       .then(data =>{
-        console.log(data)
         setItems(data)
       })
     }
