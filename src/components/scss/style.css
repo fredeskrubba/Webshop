@@ -8,6 +8,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .item-slider {
   padding: 1vw;
 }
@@ -97,7 +99,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2vw 5vw;
+  padding: 0.5vw 5vw;
   font-weight: 900;
   position: fixed;
   top: 0;
@@ -111,6 +113,17 @@ nav .logo {
   width: 10vw;
   color: #f8f5f2;
   text-decoration: none;
+}
+
+nav .cat-container .categories {
+  color: #f8f5f2;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+nav .cat-container .categories:hover {
+  cursor: pointer;
+  color: #a5f0f7;
 }
 
 nav .map-icon-container {
@@ -151,7 +164,7 @@ nav .icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4vw;
+  gap: 3vw;
 }
 
 nav .icons a {
@@ -488,6 +501,48 @@ footer .upper-footer .footer-nav .links div a svg {
 
 .modal svg:hover {
   cursor: pointer;
+}
+
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.search-bar svg {
+  height: 2vw;
+  background-color: black;
+  width: 2vw;
+  padding: 1vw;
+  border-radius: 100%;
+  position: relative;
+  left: 3vw;
+}
+
+.search-bar svg:hover {
+  background-color: #43acb5;
+  cursor: pointer;
+}
+
+.search-bar svg:hover path {
+  stroke: #a5f0f7;
+}
+
+.search-bar input {
+  height: 3vw;
+  border-radius: 40px;
+  border: none;
+  padding: 0 7vw;
+  font-size: 1.5rem;
+  background-color: #f8f5f2;
+}
+
+.search-bar input:focus {
+  outline: none;
 }
 
 html {

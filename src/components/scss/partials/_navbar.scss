@@ -2,7 +2,7 @@ nav{
     background-color: $main-color-1;
     display: flex;
     align-items: center;
-    padding: 2vw 5vw;
+    padding: 0.5vw 5vw;
     font-weight: 900;
     position: fixed;
     top: 0;
@@ -14,6 +14,17 @@ nav{
         width: 10vw;
         color: $background-color;
         text-decoration: none;
+    }
+    .cat-container{
+        .categories{
+            color: $background-color;
+            font-weight: 100;
+            font-size: 1.5rem;
+            &:hover{
+                cursor: pointer;
+                color: $secondary-color;
+            }
+        }
     }
     .map-icon-container{
         margin-right: 3vw;
@@ -43,7 +54,7 @@ nav{
     }
     .icons{
         display: flex;
-        gap: 4vw;
+        gap: 3vw;
         a{
             display: flex;
             align-items: center;

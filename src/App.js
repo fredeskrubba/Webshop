@@ -4,7 +4,7 @@ import {ReactComponent as account} from "./components/img/account.svg";
 import {ReactComponent as heart} from "./components/img/heart.svg";
 import {ReactComponent as Logo} from "./components/img/logo.svg";
 import "./components/scss/style.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import payments from "./components/img/payments.png";
 import Home from "./components/pages/home";
@@ -19,13 +19,11 @@ function App() {
     {
       id: 0,
       svg: heart,
-      text: "Ønskeliste",
       route: "wishlist"
     },
     {
       id: 1,
       svg: account,
-      text: "Profil",
       route: "account",
     },
   ]
