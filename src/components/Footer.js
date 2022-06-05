@@ -1,5 +1,3 @@
-
-
 const Footer = ({payments}) => {
     return ( 
         <footer>
@@ -14,6 +12,33 @@ const Footer = ({payments}) => {
                 </form>
             </section>
             <img src={payments.src} alt={payments.alt}/>
+            <article className="footer-links">
+                <div className="link-row">
+                    <h3>Om Os</h3>
+                    <ul>
+                        <li>Historie</li>
+                        <li>Værdier</li>
+                        <li>Persondatapolitik</li>
+                    </ul>
+                </div>
+                <div className="link-row">
+                    <h3>Om Os</h3>
+                    <ul>
+                        <li>Historie</li>
+                        <li>Værdier</li>
+                        <li>Persondatapolitik</li>
+                    </ul>
+                </div>
+                <div className="link-row">
+                    <h3>Om Os</h3>
+                    <ul>
+                        <li>Historie</li>
+                        <li>Værdier</li>
+                        <li>Persondatapolitik</li>
+                    </ul>
+                </div>
+            </article>
+            <p className="trademark">©Frederik Skrubbeltrang - 2022</p>
         </footer>
      );
 }
