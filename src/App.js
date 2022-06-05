@@ -1,33 +1,44 @@
 import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 import {ReactComponent as maps} from "./components/img/maps.svg";
-import {ReactComponent as account} from "./components/img/account.svg";
-import {ReactComponent as heart} from "./components/img/heart.svg";
 import {ReactComponent as Logo} from "./components/img/logo.svg";
 import "./components/scss/style.css";
 import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/Footer";
 import payments from "./components/img/payments.png";
 import Home from "./components/pages/home";
 import Account from "./components/pages/account";
 import Maps from "./components/Maps";
-import {useRef} from "react";
+import {useRef, useEffect, useState} from "react";
 
 function App() {
   
-  const navButtons = [
-    
-    {
-      id: 0,
-      svg: heart,
-      route: "wishlist"
-    },
-    {
-      id: 1,
-      svg: account,
-      route: "account",
-    },
-  ]
   
+  const [items, setItems] = useState([])
+  useEffect(
+    ()=>{
+      fetch("https://my-webshop-api.herokuapp.com/navIcons")
+      .then(response => {
+        return response.json()
+      })
+      .then(data =>{
+        setItems(data)
+      })
+    }
+  ,[])
+
+  const [payments, setPayments] = useState([])
+  useEffect(
+    ()=>{
+      fetch("https://my-webshop-api.herokuapp.com/payments")
+      .then(response => {
+        return response.json()
+      })
+      .then(data =>{
+        setPayments(data)
+      })
+    }
+  ,[]) 
+
   const modalRef = useRef()
   function toggleMap(map){
     if (map.style.display === "none"){
@@ -41,7 +52,9 @@ function App() {
       <div className="App">
         <Navbar
           logo={<Logo/>}
-          icons={navButtons}
+
+          // the icons prop will be an empty array at the start, so only use it once the state updates.
+          icons={items.navButtons !== undefined ? items.navButtons : []}
           map={modalRef}
           toggleMap={toggleMap}
         />
@@ -53,12 +66,8 @@ function App() {
           </Route>
         </Routes>
         <Maps ref={modalRef} toggleMap={toggleMap} map={modalRef}/>
-        <Footer 
-          weekdays="9:30-16:00"
-          saturdays="10:00-15:00"
-          sundays="Lukket"
+        <Footer
           payments={payments}
-          copyright="@Frederik Skrubbeltrang - 2022"
         />
       </div>
     </Router>
