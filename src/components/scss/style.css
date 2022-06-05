@@ -108,22 +108,67 @@ nav {
   z-index: 1;
 }
 
-nav .logo {
+nav .left-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3vw;
+}
+
+nav .left-nav .logo {
   margin-right: auto;
   width: 10vw;
   color: #f8f5f2;
   text-decoration: none;
 }
 
-nav .cat-container .categories {
+nav .left-nav .cat-container:hover .cat-tab {
+  display: block;
+}
+
+nav .left-nav .cat-container:hover .cat-tab .cat-link {
+  width: 10vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1vw;
+  border-bottom: 3px solid black;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+}
+
+nav .left-nav .cat-container:hover .cat-tab .cat-link svg {
+  height: 8vh;
+  width: 100%;
+}
+
+nav .left-nav .cat-container .categories {
   color: #f8f5f2;
   font-weight: 100;
   font-size: 1.5rem;
 }
 
-nav .cat-container .categories:hover {
+nav .left-nav .cat-container .categories:hover {
   cursor: pointer;
   color: #a5f0f7;
+}
+
+nav .left-nav .cat-container .cat-tab {
+  position: absolute;
+  background-color: #43acb5;
+  padding: 2vw;
+  border-radius: 5%;
+  display: none;
 }
 
 nav .map-icon-container {
@@ -383,95 +428,61 @@ header button p {
   fill: #a5f0f7;
 }
 
-footer {
+footer .footer-form-section {
   background-color: #a8571d;
-  padding: 1vw;
 }
 
-footer .upper-footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 3fr;
-      grid-template-columns: 1fr 3fr;
+footer .footer-form-section article {
+  text-align: center;
   color: #f8f5f2;
-  margin: 2vw;
 }
 
-footer .upper-footer .opening-hours h2 {
+footer .footer-form-section article h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 5rem;
+  padding-top: 10vh;
+  margin: 0;
+}
+
+footer .footer-form-section article p {
   font-size: 2rem;
-  border-bottom: 4px solid #f8f5f2;
-  width: 70%;
-  padding: 0 1vw;
-  margin-bottom: 5vh;
 }
 
-footer .upper-footer .opening-hours p {
-  font-size: 1.4rem;
-  margin: 1vh 0;
-}
-
-footer .upper-footer .footer-nav {
+footer .footer-form-section form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.4rem;
-}
-
-footer .upper-footer .footer-nav .links {
-  margin: 0 3vw;
-}
-
-footer .upper-footer .footer-nav .links h4 {
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-footer .upper-footer .footer-nav .links div {
-  margin: 0.5vw;
-}
-
-footer .upper-footer .footer-nav .links div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1.5vh 0;
-  text-decoration: none;
-  color: #f8f5f2;
+  gap: 2vw;
 }
 
-footer .upper-footer .footer-nav .links div a:hover {
-  color: #a5f0f7;
-}
-
-footer .upper-footer .footer-nav .links div a:hover svg path {
-  fill: #a5f0f7;
-}
-
-footer .upper-footer .footer-nav .links div a svg {
-  height: 3vh;
-}
-
-.lower-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 2vw;
-}
-
-.lower-footer h4 {
-  color: #f8f5f2;
-  font-size: 1.2rem;
-  margin-right: auto;
-}
-
-.lower-footer img {
+footer .footer-form-section form input {
+  width: 40vw;
   height: 6vh;
+  padding: 0.5vw;
+  font-size: 2rem;
+  background-color: #a5f0f7;
+  border: none;
+  border-radius: 12px;
+}
+
+footer .footer-form-section form input:focus {
+  outline: none;
+}
+
+footer .footer-form-section form button {
+  border: none;
+  width: 10vw;
+  height: 10vh;
+  background-color: #43acb5;
+  border-radius: 40px;
+  padding: 1vw;
+  font-size: 1.5rem;
 }
 
 .modal {
@@ -481,9 +492,6 @@ footer .upper-footer .footer-nav .links div a svg {
   bottom: 0;
   left: 0;
   right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -520,7 +528,7 @@ footer .upper-footer .footer-nav .links div a svg {
   padding: 1vw;
   border-radius: 100%;
   position: relative;
-  left: 3vw;
+  left: 4vw;
 }
 
 .search-bar svg:hover {
@@ -533,10 +541,10 @@ footer .upper-footer .footer-nav .links div a svg {
 }
 
 .search-bar input {
-  height: 3vw;
+  height: 3.9vw;
   border-radius: 40px;
   border: none;
-  padding: 0 7vw;
+  padding: 0 4.5vw;
   font-size: 1.5rem;
   background-color: #f8f5f2;
 }

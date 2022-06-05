@@ -1,70 +1,48 @@
 @import "./variables";
 
 footer{
-    background-color: $main-color-1;
-    padding: 1vw;
-    .upper-footer{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        color: $background-color;
-        margin: 2vw;
-        .opening-hours{
+    .footer-form-section{
+        background-color: $main-color-1;
+        article{
+            text-align: center;
+            color: $background-color;
             h2{
-                font-size: 2rem;
-                border-bottom: 4px solid $background-color;
-                width: 70%;
-                padding: 0 1vw;
-                margin-bottom: 5vh;
+                font-family: $header-font;
+                font-size: 5rem;
+                padding-top: 10vh;
+                margin: 0;
             }
             p{
-                font-size: 1.4rem;
-                margin: 1vh 0;
+                font-size: 2rem;
+
             }
         }
-        .footer-nav{
+        form{
             display: flex;
-            font-size: 1.4rem;
-            .links{
-                margin: 0 3vw;
-                h4{
-                    font-size: 1.4rem;
-                    font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+            input{
+                width: 40vw;
+                height: 6vh;
+                padding: 0.5vw;
+                font-size: 2rem;
+                background-color: $secondary-color;
+                border: none;
+                border-radius: 12px;
+                &:focus{
+                    outline: none;
                 }
-                div{
-                    margin: 0.5vw;
-                    a{
-                        display: flex;
-                        align-items: center;
-                        margin: 1.5vh 0;
-                        text-decoration: none;
-                        color: $background-color;
-                        &:hover{
-                            color: $secondary-color;
-                            svg{
-                                path{
-                                    fill: $secondary-color;
-                                }
-                            }
-                        }
-                        svg{
-                            height: 3vh;
-                            }
-                        }
-                    }
-                }
+            }
+            button{
+                border: none;
+                width: 10vw;
+                height: 10vh;
+                background-color: $main-color-2;
+                border-radius: 40px;
+                padding: 1vw;
+                font-size: 1.5rem;
             }
         }
     }
-    .lower-footer{
-        display: flex;
-        align-items: center;
-        margin: 0 2vw;
-        h4{
-            color: $background-color;
-            font-size: 1.2rem;
-            margin-right: auto;
-        }
-        img{
-            height: 6vh;
-        }
-    }
+}

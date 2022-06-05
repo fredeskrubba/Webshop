@@ -11,7 +11,7 @@
         padding: 1vw;
         border-radius: 100%;
         position: relative;
-        left: 3vw;
+        left: 4vw;
         &:hover{
             background-color: $main-color-2;
             path{
@@ -21,10 +21,10 @@
         }
     }
     input{
-        height: 3vw;
+        height: 3.9vw;
         border-radius: 40px;
         border: none;
-        padding: 0 7vw;
+        padding: 0 4.5vw;
         font-size: 1.5rem;
         background-color: $background-color;
         &:focus{

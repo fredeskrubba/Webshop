@@ -9,20 +9,52 @@ nav{
     left: 0;
     right: 0;
     z-index: 1;
-    .logo{
-        margin-right: auto;
-        width: 10vw;
-        color: $background-color;
-        text-decoration: none;
-    }
-    .cat-container{
-        .categories{
+    .left-nav{
+        display: flex;
+        align-items: center;
+        gap: 3vw;
+        .logo{
+            margin-right: auto;
+            width: 10vw;
             color: $background-color;
-            font-weight: 100;
-            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .cat-container{
             &:hover{
-                cursor: pointer;
-                color: $secondary-color;
+                .cat-tab{
+                    display: block;
+                    .cat-link{
+                        width: 10vw;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1vw;
+                        border-bottom: 3px solid black;
+                        margin-bottom: 1vh;
+                        padding-bottom: 1vh;
+                        svg{
+                            height: 8vh;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .categories{
+                color: $background-color;
+                font-weight: 100;
+                font-size: 1.5rem;
+                &:hover{
+                    cursor: pointer;
+                    color: $secondary-color;
+                }
+            }
+            .cat-tab{
+                position: absolute;
+                background-color: $main-color-2;
+                padding: 2vw;
+                border-radius: 5%;
+                display: none;
             }
         }
     }

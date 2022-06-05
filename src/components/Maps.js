@@ -4,7 +4,8 @@ import {forwardRef, useRef} from "react";
 const Maps = forwardRef((props, modalRef) => {
 
     return ( 
-        <div className="modal" ref={modalRef}>
+        // inline style display none on modal, because the function doesn't change the css, it just adds it inline
+        <div className="modal" ref={modalRef} style={{display: "none"}}>
               <Cross onClick={
                   ()=>{
                       props.toggleMap(modalRef.current)
